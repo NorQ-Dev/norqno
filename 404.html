@@ -3,93 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 – Siden ble ikke funnet | NorQ</title>
+  <title>404 – NorQ</title>
   <style>
-    /* Gjør at body dekker hele høyden og sentreres */
-    html, body {
+    body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f2f2f2;
-      color: #333;
-    }
-    body {
+      font-family: Arial, sans-serif;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #00312c, #00453d, #006255);
+      color: #fff;
+      animation: fadeIn 1.5s ease-in;
     }
     .container {
       text-align: center;
-      padding: 40px;
-      background-color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
-      margin: 20px;
+      animation: float 3s ease-in-out infinite;
+      padding: 0 1.5rem;
     }
     h1 {
-      margin: 0 0 20px;
-      font-size: 2rem;
-      color: #2c3e50;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 2px;
     }
-    h2 {
-      margin: 0 0 20px;
-      font-size: 1.5rem;
-      color: #e74c3c;
+    .code {
+      font-size: 5rem;
+      font-weight: bold;
+      margin-bottom: 0.3rem;
     }
     p {
-      margin: 0 0 16px;
-      line-height: 1.5;
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
     }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-      border-bottom: 1px dotted #0066cc;
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    a:hover {
-      color: #004999;
-      border-bottom-style: solid;
-    }
-    .button {
+    .btn {
       display: inline-block;
-      margin-top: 24px;
       padding: 12px 24px;
-      background-color: #0066cc;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
+      background: #ffeb3b;
+      color: #00312c;
       font-weight: bold;
-      transition: background-color 0.2s ease-in-out;
+      border-radius: 6px;
+      text-decoration: none;
+      min-width: 150px;
     }
-    .button:hover {
-      background-color: #004999;
+    .btn.secondary {
+      background: transparent;
+      border: 2px solid #ffeb3b;
+      color: #ffeb3b;
     }
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 1.5rem;
-      }
-      h2 {
-        font-size: 1.25rem;
-      }
-      .container {
-        padding: 20px;
-      }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Velkommen til NorQ</h1>
-    <h2>404 – Siden ble ikke funnet</h2>
-    <p>Beklager, men siden du prøver å nå finnes ikke eller er flyttet.</p>
-    <p>Det kan hende linken du fulgte er utdatert, eller at du skrev inn feil adresse.</p>
-    <p>
-      Hvis du mener dette er en feil, ta gjerne kontakt med oss:
-      <a href="mailto:kontakt@seternes.net">kontakt@seternes.net</a>
-    </p>
-<!--    <a class="button" href="/">Gå tilbake til forsiden</a>
+    <div class="code">404</div>
+    <h1>Oi, her vart det bomtur</h1>
+    <p>Siden du letter etter finnes ikke :(</p>
+    <div class="btn-row">
+      <a href="/" class="btn">Gå tilbake til forsiden</a>
+      <a href="mailto:post@norq.no" class="btn secondary">Kontakt NorQ</a>
+    </div>
   </div>
 </body>
 </html>
--->
+
